@@ -1,0 +1,22 @@
+1. How does light interact differently with differtent objects in real life? Give 3 examples.
+With transparent surfaces, light is able to mostly pass through it, reflective surfaces reflect more light, and other surfaces absorb more.
+
+2. Why do objects appear to have different colors to our eyes?
+They appear to have different colors to our eyes becasue they absorb different wavelengths of light, and our eyes try to interpret the color of the light that was reflected.
+
+3. What's the advantage of using YUV color space?
+The advantage of using the YUV color space is that there are less errors in in the image quality. 
+
+
+4. How are colors added differently for lights compared to paint? What does R+G+B equal to in each case. 
+In light, the colors of Red, Green, and Blue are either brightened or dimmed in order to produce the color that is needed. For light, R+G+B=white. 
+In paint, pigments containing the colors of yellow, cyan, and magenta are added in order to produce the color that is needed. For paint, R+G+B=black.
+
+5. Why are green screens green? Hint: think about the arrangement of color filters in front of the camera sensor.
+Green screens are green because it is easier to edit out. Green is not naturally ocurring in people, and as a result, it would be easy to edit out. In addition, there are more green sensors in cameras.
+
+6. Why is tone mapping needed for HDR images?
+It is needed so that the HDR content will be able to be viewed on a displays with less color range than the HDR content has 
+
+7. What is the relationship between the wavelength of the light and the color of the light. E.g., why is the wavelength of 700nm associated with red, and 400nm associated with purple.
+Visible light has appear differently based on the wavelengths because, when our eyes look at an object with a certain wavelength, it interprets it as a different color. 
