@@ -1,0 +1,112 @@
+import * as THREE from 'https://threejsfundamentals.org/threejs/resources/threejs/r132/build/three.module.js';
+// import Orbit controls
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.121.1/examples/jsm/controls/OrbitControls.js';
+
+// create a render and set the size
+var renderer = new THREE.WebGLRenderer();
+renderer.setClearColor(new THREE.Color(0x000000));
+renderer.setSize( window.innerWidth, window.innerHeight );
+document.body.appendChild( renderer.domElement );
+
+// create a camera, which defines where we're looking at.
+var camera = new THREE.PerspectiveCamera( 45, window.innerWidth/window.innerHeight, 0.1, 1000 );
+
+var scene=new THREE.Scene();
+
+
+const vert=new Float32Array([
+0.0, 0.0, 0.0,
+1.0, 0.0, 0.0,
+0.0, 1.0, 0.0,
+
+1.0, 1.0, 0.0,
+0.0, 1.0, 0.0,
+1.0, 0.0, 0.0,
+
+1.0, 0.0, 0.0,
+1.0, 0.0, -1.0,
+1.0, 1.0, 0.0,
+
+1.0, 0.0, -1.0,
+1.0, 1.0, -1.0,
+1.0, 1.0, 0.0,
+
+1.0, 0.0, -1.0,
+0.0, 0.0, -1.0,
+1.0, 1.0, -1.0,
+
+0.0, 0.0, -1.0,
+0.0, 1.0, -1.0,
+1.0, 1.0, -1.0,
+
+0.0, 0.0, -1.0,
+0.0, 0.0, 0.0,
+0.0, 1.0, -1.0,
+
+0.0, 0.0, 0.0,
+0.0, 1.0, 0.0,
+0.0, 1.0, -1.0,
+
+0.0, 1.0, 0.0,
+1.0, 1.0, 0.0,
+0.0, 1.0, -1.0,
+
+1.0, 1.0, 0.0,
+1.0, 1.0, -1.0,
+0.0, 1.0, -1.0,
+
+0.0, 0.0, 0.0,
+0.0, 0.0, -1.0,
+1.0, 0.0, 0.0,
+
+1.0, 0.0, 0.0,
+0.0, 0.0, -1.0,
+1.0, 0.0, -1.0
+
+]);
+
+const cubegeometry=new THREE.BufferGeometry();
+cubegeometry.setAttribute('position', new THREE.BufferAttribute(vert, 3));
+
+const wireframe=new THREE.WireframeGeometry(cubegeometry);
+
+const edge=new THREE.LineSegments(wireframe);
+edge.material.depthTest=false;
+edge.material.opacity=0.5;
+edge.material.transparent=true;
+edge.position.set(-1,0,0);
+scene.add(edge);
+
+cubegeometry.setAttribute('position', new THREE.BufferAttribute(vert,3));
+
+cubegeometry.computeVertexNormals();
+
+const material = new THREE.MeshNormalMaterial();
+const mesh = new THREE.Mesh( cubegeometry, material );
+mesh.position.set(1,0,0); 
+scene.add(mesh);
+
+camera.position.set(0,0,10);
+
+var controls=new OrbitControls (camera, renderer.domElement);
+
+var lightcolor=0xFFFFFF;
+var intense=25;
+var light=new THREE.AmbientLight(lightcolor, intense);
+scene.add(light);
+
+const color2 = 0xFFFFFF;
+const intensity2 = 1;
+const light2 = new THREE.DirectionalLight(color2, intensity2);
+light2.position.set(0, 0, 100);
+light2.target.position.set(-5, 0, 0);
+scene.add(light2);
+scene.add(light2.target);
+
+var animate = function(){
+	requestAnimationFrame(animate);
+	renderer.render( scene, camera );
+  controls.update();
+}
+
+animate();
