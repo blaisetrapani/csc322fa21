@@ -1,0 +1,18 @@
+{
+    "status": "SUCCESS",
+    "execMode": "LOCAL",
+    "nodeName": "Texturing_1",
+    "nodeType": "Texturing",
+    "packageName": "aliceVision",
+    "packageVersion": null,
+    "graph": "",
+    "commandLine": "aliceVision_texturing  --input \"c:/Users/blais/OneDrive/Documents/Junior Semester 1/Intro to computer graphics/Class Project/Snowman November 28/MeshroomCache/Meshing/90cda51470c010eaeadce2c35e719de9c128959d/densePointCloud.abc\" --imagesFolder \"c:/Users/blais/OneDrive/Documents/Junior Semester 1/Intro to computer graphics/Class Project/Snowman November 28/MeshroomCache/PrepareDenseScene/9b2136df5f53940fae1bc67a3e0757bf9296115c\" --inputMesh \"c:/Users/blais/OneDrive/Documents/Junior Semester 1/Intro to computer graphics/Class Project/Snowman November 28/MeshroomCache/MeshFiltering/b7caedfd4eab1e9240a8e4bb43d6bfdbee7e04fa/mesh.obj\" --textureSide 8192 --downscale 1 --outputTextureFileType png --unwrapMethod Basic --useUDIM True --fillHoles False --padding 5 --multiBandDownscale 4 --multiBandNbContrib 1 5 10 0 --useScore True --bestScoreThreshold 0.1 --angleHardThreshold 90.0 --processColorspace sRGB --correctEV False --forceVisibleByAllVertices False --flipNormals False --visibilityRemappingMethod PullPush --subdivisionTargetRatio 0.8 --verboseLevel info --output \"c:/Users/blais/OneDrive/Documents/Junior Semester 1/Intro to computer graphics/Class Project/Snowman November 28/MeshroomCache/Texturing/7794f586ae2e18cbc5e90f27d9568a7ba1c94cc7\"",
+    "env": null,
+    "startDateTime": "2021-12-01 19:40:26.680274",
+    "endDateTime": "2021-12-01 19:41:04.416620",
+    "elapsedTime": 37.73634624481201,
+    "hostname": "LAPTOP-B8R6EJHJ",
+    "sessionUid": "05979bca-52e5-11ec-a5d0-80c5f20677f7",
+    "returnCode": 0,
+    "elapsedTimeStr": "0:00:37.736346"
+}
